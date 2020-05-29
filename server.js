@@ -77,7 +77,7 @@ io.on('connection', (socket) => {
 			console.log(Date.now())
 			socket.emit('weather', {'Heswall':currentDataHeswall, 'Columbia':currentDataColumbia});
 		},3000)
-	}, 120000);
+	}, 5 * 60 * 1000);
   
   socket.on('recieved', (data) => {
     console.log(data);

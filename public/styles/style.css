@@ -389,7 +389,9 @@ footer{
 	grid-template-columns: 100%;
 	text-align:center;
 	margin:4%;
-	column-gap:5%;
+	grid-column-gap:5%;
+	grid-row-gap:5%;
+	margin-bottom:10%;
 }
 	.tab{
 		margin-left:0;

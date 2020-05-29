@@ -1,6 +1,10 @@
 let loc1 = new Array();
 let loc2 = new Array();
 let poll = false;
+let myChartData;
+let myChartData2;
+let myChartData3;
+
 
 if(localStorage.getItem('loc1')){
 	console.log("loc1 already exists");
@@ -34,10 +38,16 @@ function showWeather(){
 	
 	document.getElementById('pollingButtonNew')
 		.addEventListener("click", () => {clearCache();poll = true;recieveData();updateButton("new")});
+	
+	if(document.getElementById('weatherCard2').innerHTML == ""){
+		document.getElementById('weatherCard2').innerHTML = "No Data Gathered Yet"
+	}
+	if(document.getElementById('weatherCard1').innerHTML == ""){
+		document.getElementById('weatherCard1').innerHTML = "No Data Gathered Yet"
+	}
 		
 }
 function updateButton(button){
-	console.log(button);
 	if(button === "old"){
 		document.getElementById('pollingButtonOld').style.backgroundColor = "#464E51";
 		document.getElementById('pollingButtonOld').innerHTML = "Polling : Active";
@@ -128,6 +138,17 @@ function checkLocalStorage(){
 }
 
 function drawGraphs(){
+	console.log("Checking charts");
+	
+	try{
+		myChartData.destroy();
+		myChartData2.destroy();
+		myChartData3.destroy();
+	}
+	catch(error){
+		console.log(error);
+	}
+	
 	var data = [];
 	var time = [];
 	var raw = JSON.parse(localStorage.getItem('loc1'))
@@ -136,7 +157,7 @@ function drawGraphs(){
 		time.push(raw[i].time);
 	}
 	var ctx = document.getElementById('myChart').getContext('2d');
-	var myChart = new Chart(ctx, {
+	myChartData = new Chart(ctx, {
     type: 'line',
     data: {
         labels: time,
@@ -180,7 +201,7 @@ var time2 = [];
 		time2.push(raw2[j].time);
 	}
 	var ctx2 = document.getElementById('myChart2').getContext('2d');
-	var myChart2 = new Chart(ctx2, {
+	myChartData2 = new Chart(ctx2, {
     type: 'line',
     data: {
         labels: time2,
@@ -228,7 +249,7 @@ var time3 = [];
 		time3.push(raw3[k].time);
 	}
 	var ctx3 = document.getElementById('myChart3').getContext('2d');
-	var myChart3 = new Chart(ctx3, {
+	myChartData3 = new Chart(ctx3, {
     type: 'line',
     data: {
         labels: time3,
