@@ -531,6 +531,15 @@ footer{
 		color:white;
 	}
 	
+	.cardContainer{
+		background-color:#292929;
+		color:white;
+	}
+	.combinedGraph{
+		background-color:#292929;
+		color:white;
+	}
+	
 	header{
 	color:white;
 	background-color:#292929;

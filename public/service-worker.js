@@ -12,6 +12,13 @@ const FILES_TO_CACHE = [
 '/manifest.json',
 '/images/bg-night.png',
 '/images/bg-day.png',
+'/images/wc-32.png',
+'/images/wc-128.png',
+'/images/wc-144.png',
+'/images/wc-152.png',
+'/images/wc-196.png',
+'/images/wc-256.png',
+'/images/wc-512.png'
 //'/socket.io/socket.io.js'
 ];
 var offline = false;

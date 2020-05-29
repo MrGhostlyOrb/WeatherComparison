@@ -2,29 +2,29 @@
   "name": "Weather",
   "short_name": "Weather",
   "icons": [{
-    "src": "/images/newIcons/lw-128.png",
+    "src": "/images/wc-128.png",
       "sizes": "128x128",
       "type": "image/png"
     }, {
-      "src": "/images/newIcons/lw-144.png",
+      "src": "/images/wc-144.png",
       "sizes": "144x144",
       "type": "image/png"
     }, {
-      "src": "/images/newIcons/lw-152.png",
+      "src": "/images/wc-152.png",
       "sizes": "152x152",
       "type": "image/png"
     }, {
-      "src": "/images/newIcons/lw-192.png",
+      "src": "/images/wc-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     }, {
-      "src": "/images/newIcons/lw-256.png",
+      "src": "/images/wc-256.png",
       "sizes": "256x256",
       "type": "image/png",
       "purpose": "maskable"
     }, {
-      "src": "/images/newIcons/lw-logo.png",
+      "src": "/images/wc-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -32,26 +32,5 @@
   "start_url": "/weather",
   "display": "standalone",
   "background_color": "#8aacc8",
-  "theme_color": "#8aacc8",
-  "shortcuts": [{
-  	"name": "Daddy's Workout",
-  	"description": "Jump to Daddy's Workout page",
-  	"url": "/option1",
-  	"icons": [{
-  		"src": "/images/lw-logo-3.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-  	}]
-  },{
-  	"name": "Babygirl's Workout",
-  	"description": "Jump to Babygirl's Workout page",
-  	"url": "/option2",
-  	"icons": [{
-  		"src": "/images/lw-logo-3.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-  	}]
-  }]
+  "theme_color": "#8aacc8"
 }
