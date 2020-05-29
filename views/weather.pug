@@ -1,0 +1,27 @@
+extends layout.pug
+
+block content
+	script(src="/socket.io/socket.io.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js")
+	body(onload = 'showWeather()')
+		header.header 
+			div.pageTitle Weather and Tempratue Web App
+		div.buttonContainer
+			button#pollingButtonNew.button Start Polling With New Data
+			button#pollingButtonOld.button Start Polling With Existing Data
+		div.weatherCardGrid
+			div.cardContainer
+				h2 Temprature in Columbia, SC ☀️
+				div#weatherCard1.weatherCard
+				canvas(id='myChart2' width='400px' height='200px')
+			div.cardContainer
+				h2 Temprature In Heswall, UK 🌧️
+				div#weatherCard2.weatherCard
+				canvas(id='myChart' width='400px' height='200px')
+		div.combinedGraph
+			h2 Combined Graph 📔️
+			canvas(id='myChart3' width='400px' height='200px')
+		
+		
+				
+			
